@@ -10,7 +10,7 @@ public class Program
         { 
             Nombre = "Kevin",
             Apellidos = "Diaz",
-            Correo = "Kevin@gmail.com"
+            Correo = "Kevin@gmail.com",
         }
         
         ,new Pedidos
@@ -27,16 +27,16 @@ public class Program
         }
        );
 
-        GestorPedidos gestor2 = new GestorPedidos(new ProveedorRopa()
+        GestorPedidos gestor2 = new GestorPedidos(new ProveedorElectronica()
         {
             Nombre = "Ana",
             Apellidos = "Quispe",
-            Correo = "Ana@gmail.com"
+            Correo = "Ana@gmail.com",
         }
 
         , new Pedidos
         {
-            Id = 1,
+            Id = 2,
             EstadoPedido = EstadoPedido.Cancelado,
             FechaPedido = DateTime.Now,
             Cliente = new Cliente
@@ -49,6 +49,7 @@ public class Program
        );
 
         gestor1.EnviarPedidosTipoProducto();
+        gestor2.EnviarPedidosTipoProducto();
         Console.ReadKey();
 
     }

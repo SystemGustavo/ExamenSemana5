@@ -19,8 +19,9 @@ namespace _1.SistGestionPedidos
 
         public void EnviarPedidosTipoProducto()
         {
-            Console.WriteLine($"Pedido : {_pedido.Id}\n Cliente : {_pedido.Cliente.Nombre}\n Estado {_pedido.EstadoPedido.ToString() } \n");
+            Console.WriteLine($"IdPedido : {_pedido.Id}\n Cliente : {_pedido.Cliente.Nombre } {_pedido.Cliente.Apellidos}\n Estado {_pedido.EstadoPedido.ToString() }\n Fecha : {_pedido.FechaPedido}\n");
             _proveedor.EnviarPedido(_pedido);
+            Console.WriteLine("Datos Enviados \n");
         }
         public void EnviarPedidoSegunTipoProducto(Pedidos Pedido, IProveedor proveedor)
         {

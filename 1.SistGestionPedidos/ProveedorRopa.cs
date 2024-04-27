@@ -11,10 +11,10 @@ namespace _1.SistGestionPedidos
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Correo { get; set; }
-        public string Tipo { get; set; } = "Proveedor Ropa";
+        public string Tipo { get; } = "Proveedor Ropa";
         public void EnviarPedido(Pedidos Pedido)
         {
-            Console.WriteLine($"Proveedor : {Nombre} \n TipoProveedor : {Tipo}");
+            Console.WriteLine($"Proveedor : {Nombre} \n TipoProveedor : {Tipo} \n");
         }
     }
 }
